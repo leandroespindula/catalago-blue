@@ -18,8 +18,25 @@ body {
 }
 
 header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
     height: 10%;
     background-color: rgb(100, 100, 100);
+}
+
+header nav{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    gap: 16px;
+    list-style: none;
 }
 
 footer {
