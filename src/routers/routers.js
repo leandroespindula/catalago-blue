@@ -1,9 +1,10 @@
 import express from "express";
-import { 
-    getIndex, getDetalhes
- } from "../controller/controllador.js";
+import { getIndex } from '../controler/Controler.js';
+import { getDetalhes } from '../controler/Controler.js';
 
-export const routers = express.Router()
 
-routers.get('/', getIndex)
-routers.get('/detalhes/:id', getDetalhes)
+export const routers = express.Router();
+
+routers.get('/', getIndex);
+
+routers.get('/detalhes', getDetalhes);

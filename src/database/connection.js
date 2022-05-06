@@ -1,7 +1,9 @@
-import Sequelize from 'sequelize'
-import dotenv from 'dotenv'
+import Sequelize from 'sequelize';
+import dotenv from 'dotenv';
 
 dotenv.config()
+
+console.log(process.env.DB_USER);
 
 export const connection = new Sequelize(
     process.env.DB_BASE,

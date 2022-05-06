@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/css/style.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/48a7f9a5e1.js" crossorigin="anonymous"></script>
-    <title> Index </title>
+    <link rel="icon" type="imagem/png" href="../img/carro.png"/>
+    <title> Inicio </title>
 </head>
 
 <body>
@@ -15,7 +15,7 @@
     <main>
         <section id="card__container">
             <% listCarros.forEach(element => { %>
-            <a href="/detalhes/= element.id %> ">
+            <a href="../detalhes.ejs">
                 <article class="cards">
                     <div class="card_img">
                         <img src="<%= element.img %>"  alt="<%= element.nome %>">

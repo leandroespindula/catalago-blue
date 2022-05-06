@@ -4,39 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="./img/icon.png"/>
     <link rel="stylesheet" href="/css/style.css">
-     <title><%= titulo %></title>
+     <title><%= Detalhes %></title>
 </head>
-<nav>
-    <article>
-        <a href="/">Home</a>
-        <a href="/cadastrar">Cadastro</a>        
-    </article>
-</nav>
 
-<div>
-    <h1><%= carros.modelo %> - <%= carros.ano %></h1>
-</div>
-<div id="detalhes">
-<div>
-    <img src=<%=carros.imagem %> width="400" height="400"></img>
-</div>
-<div id="caixa">    
-    <li>Marca : <%=carros.marca%></li>
-</div> 
-</div>
-<div id="botoes">
-    <div>
-        <button type="submit"><a href="/editar/<%=carros.id%>">Editar</a></button>
-    </div>
-    <div>
-        <button type="submit"><a href="/deletar/<%=carros.id%>">Excluir</a></button>
-    </div>
-</div>
-
+<%- include('./partials/header.ejs') %>
 
 <body>
-    
+    <div>
+        <h1><%= carros.modelo %> - <%= carros.ano %></h1>
+    </div>
+    <div id="detalhes">
+    <div>
+        <img src=<%=carros.img %> width="400" height="400"></img>
+    </div>
+    <div id="caixa">    
+        <li>Marca : <%=carros.marca%></li>
+    </div> 
+    </div>
+    <div id="botoes">
+        <div>
+            <button type="submit"><a href="/editar/<%=carros.id%>">Editar</a></button>
+        </div>
+        <div>
+            <button type="submit"><a href="/deletar/<%=carros.id%>">Excluir</a></button>
+        </div>
+    </div>
+
+    <h1>detalhes</h1>
 </body>
 </html>
