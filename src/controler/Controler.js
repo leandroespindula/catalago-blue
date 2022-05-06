@@ -7,9 +7,6 @@ import {
 
 export const getIndex = async (req, res) => {
     try {
-        // const listFilmes = await connection.query('SELECT * FROM filmes', {
-        //     model: filmes
-        // })
         const listCarros = await carros.findAll()
         res.render('index.ejs', {
             listCarros
@@ -19,11 +16,14 @@ export const getIndex = async (req, res) => {
     }
 }
 
-export const getDetalhes = (req, res) => {
+export const getDetalhes = async (req, res) => {
     try {
-      res.render("detalhes");
+        const listCarros = await carros.findByPk(req.params.id);
+        res.render("detalhes.ejs", {
+            listCarros
+        });
     } catch (error) {
-      res.send(error.message);
+        res.send(error.message);
     }
   };
   

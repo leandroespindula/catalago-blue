@@ -5,32 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
-     <title><%= Detalhes %></title>
+     <title>Detalhes</title>
 </head>
 
-<%- include('./partials/header.ejs') %>
-
 <body>
-    <div>
-        <h1><%= carros.modelo %> - <%= carros.ano %></h1>
-    </div>
-    <div id="detalhes">
-    <div>
-        <img src=<%=carros.img %> width="400" height="400"></img>
-    </div>
-    <div id="caixa">    
-        <li>Marca : <%=carros.marca%></li>
-    </div> 
-    </div>
-    <div id="botoes">
-        <div>
-            <button type="submit"><a href="/editar/<%=carros.id%>">Editar</a></button>
-        </div>
-        <div>
-            <button type="submit"><a href="/deletar/<%=carros.id%>">Excluir</a></button>
-        </div>
-    </div>
 
-    <h1>detalhes</h1>
+    <%- include('./partials/header.ejs') %>
+    
+    <main>
+
+        <section id="card__container">
+            
+            <article class="cards">
+                <div class="card_img">
+                    <img src="<%= listCarros.img %>"  alt="<%= listCarros.nome %>">
+                </div>
+                <div class="card_modelo">
+                    <%= listCarros.modelo %>
+                </div>
+                <div>
+                    <%= listCarros.marca %>
+                </div>
+                <div>
+                    <%= listCarros.ano %>
+                </div>
+                </article>
+            
+        </section>
+        
+    </main>
+
+    <%- include('./partials/footer.ejs') %>
 </body>
+    
 </html>

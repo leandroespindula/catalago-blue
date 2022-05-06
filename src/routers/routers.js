@@ -7,4 +7,4 @@ export const routers = express.Router();
 
 routers.get('/', getIndex);
 
-routers.get('/detalhes', getDetalhes);
+routers.get('/detalhes/:id', getDetalhes);

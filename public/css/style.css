@@ -88,6 +88,19 @@ article.cards div.card_img {
 article.cards div.card_img img {
     height: 80%;
     padding-top: 1.5rem;
+    
+    
+}
+
+section#card__container article.cards div.card_img img {
+    cursor: pointer;
+    transition: 0.5s ease;
+    flex-grow: 0.1;
+}
+
+section#card__container article.cards div.card_img img {
+    transform: scale(1.1);
+
 }
 
 article.cards .card_modelo {
@@ -119,4 +132,12 @@ footer {
     background-color: #F2F2F2;
     gap: 10px;
 } 
+
+footer a {
+    color: #BF9663;   
+}
+
+footer a:hover {
+    color: #D9B26A;
+}
 

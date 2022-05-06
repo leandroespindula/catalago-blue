@@ -23,7 +23,17 @@ export const carros = connection.define('carros', {
     img: {
         type: Sequelize.STRING,
         allowNull: false
+    },
+    valor: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    descricao: {
+        type: Sequelize.STRING,
+        allowNull: false
     }
+
+
 
 }, {
     freezeTableName: true,
