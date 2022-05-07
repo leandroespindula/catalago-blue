@@ -41,3 +41,9 @@ export const carros = connection.define('carros', {
     updatedAt: false,
     timestamps: false
 })
+
+const initTable = async () => {
+    await carros.sync()
+}
+
+initTable()

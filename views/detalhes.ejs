@@ -21,14 +21,25 @@
                     <img src="<%= listCarros.img %>"  alt="<%= listCarros.nome %>">
                 </div>
                 <div class="card_modelo">
-                    <%= listCarros.modelo %>
+                    <%=listCarros.modelo %>
                 </div>
-                <div>
-                    <%= listCarros.marca %>
+                <div id="detalhes-decricao">
+                    <%= listCarros.descricao %>
                 </div>
-                <div>
-                    <%= listCarros.ano %>
+
+                <div id="marca-detalhes">
+                    <div>
+                        <h3>Marca: <%= listCarros.marca %></h3>
+                    </div>
+                    <div>
+                        <h3>Ano: <%= listCarros.ano %></h3>
+                    </div>
+                    <div>
+                        <h3>Valor: R$ <%= listCarros.valor %></h3>
+                    </div>
                 </div>
+                
+                
                 </article>
             
         </section>

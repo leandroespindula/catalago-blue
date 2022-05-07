@@ -17,6 +17,8 @@ body {
     max-width: 100%;
     max-height: 100%;
 }
+
+
 header {
     display: flex;
     justify-content: center;
@@ -31,6 +33,9 @@ img#logo {
     height: 100%;    
 }
 
+/*
+PAGINA INICIAL
+*/
 ul#navegacao {
     display: flex;
     gap: 16px;
@@ -86,7 +91,7 @@ article.cards div.card_img {
 }
 
 article.cards div.card_img img {
-    height: 80%;
+    height: 50%;
     padding-top: 1.5rem;
     
     
@@ -141,3 +146,15 @@ footer a:hover {
     color: #D9B26A;
 }
 
+/**
+PAGINA DESCRIÇÃO
+*/
+
+#detalhes-descricao {
+    margin-top: 1rem;
+}
+
+
+article.cards #marca-detalhes {
+    border: red;
+}

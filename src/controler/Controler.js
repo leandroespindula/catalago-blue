@@ -25,31 +25,25 @@ export const getDetalhes = async (req, res) => {
     } catch (error) {
         res.send(error.message);
     }
-  };
-  
+};
 
-// export const getDetalhes = async (req, res) => {
-//     try {
-//         // const filmesDetalhes = await connection.query(`SELECT * FROM filmes WHERE id = ${req.params.id}`)
-//         const carrosDetalhes = await carros.findByPk(req.params.id)
-//         res.render('detalhes.ejs', {
-//             carrosDetalhes
-//         })
-//     }
-//     catch(error){
-//         res.send(error.message)
-//     }
-// }
+export const getCadastrar = (req, res) => {
+    res.render('cadastrar.ejs');
+};
 
-// export const getCadastrar = async (req, res) => {
-//     try {
-//         // const filmesDetalhes = await connection.query(`SELECT * FROM filmes WHERE id = ${req.params.id}`)
-//         const carrosCadastrar = await carros.findByPk(req.params.id)
-//         res.render('cadastrar.ejs', {
-//             carrosCadastrar
-//         })
-//     }
-//     catch(error){
-//         res.send(error.message)
-//     }
-// }
+export const postCadastrar = async (req, res) => {
+    const { modelo, marca, ano, img, valor, descricao } = req.body
+    try {
+        // await connection.query(`INSERT INTO filmes (nome, diretor, img, duracao, ano, iframe) VALUES('${nome}', '${diretor}', '${img}', ${duracao}, '${ano}', '${iframe}')`) 
+        if(!modelo || !marca || !ano || !img || !valor || !descricao){
+            res.send('Todos os campos são obrigatórios!')
+        } else {
+            await carros.create({modelo, marca, ano, img, valor, descricao})
+            res.render('cadastrar.ejs')
+        }
+    }
+    catch(error){
+        res.send(error.message)
+    }
+}
+
