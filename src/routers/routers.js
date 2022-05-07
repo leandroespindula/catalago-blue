@@ -1,14 +1,23 @@
-import express from "express";
-import { getIndex } from '../controler/Controler.js';
-import { getDetalhes } from '../controler/Controler.js';
-import { getCadastrar } from '../controler/Controler.js';
-import { postCadastrar } from '../controler/Controler.js';
+import express from 'express'
+import { 
+    getIndex, 
+    getDetalhes,
+    getDeletar,
+    getCadastrar,
+    postCadastrar,
+    getEditar,
+    postEditar
+} from '../controler/Controler.js'
 
 
-export const routers = express.Router();
+export const routers = express.Router()
 
-routers.get('/', getIndex);
-routers.get('/detalhes/:id', getDetalhes);
+routers.get('/', getIndex)
+routers.get('/detalhes/:id', getDetalhes)
+routers.get('/deletar/:id', getDeletar)
 
-routers.get('/cadastrar', getCadastrar);
-routers.post('/cadastrar', postCadastrar);
+routers.get('/cadastrar', getCadastrar)
+routers.post('/cadastrar', postCadastrar)
+
+routers.get('/editar/:id', getEditar)
+routers.post('/editar/:id', postEditar)

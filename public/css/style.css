@@ -129,6 +129,11 @@ article .card_modelo{
     text-decoration: none;
 }
 
+ #card__container #btn___container {
+     background-color: red;
+
+}
+
 footer {
     display: flex;
     justify-content: center;

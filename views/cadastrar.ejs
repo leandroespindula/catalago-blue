@@ -1,71 +1,59 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastrar</title>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="/css/style.css" rel="stylesheet">
+    <title> Criar </title>
 </head>
+
 <body>
-    <header>
-
-        <%- include('./partials/header.ejs') %>
-    
-    </header>
-
-    <main class="container">
-
-        <div class="card-add-produto card">
-
-            <form action="/cadastrar" method="post">
-                <legend class="atual">Adicionar Carro</legend>
-
-                <div class="form-add">
-                    <fieldset>
-                        <label for="modelo">Modelo:</label>
-                        <input type="text" name="modelo" placeholder="Nome do modelo" required>
-                    </fieldset>
-                   
-                
-                    <fieldset>
-                        <label for="marca">Marca:</label>
-                        <input type="text" name="marca" placeholder="Nome da marca" required>
-                    </fieldset>
-                    
-                
-                    <fieldset>
-                        <label for="ano">Ano:</label>
-                        <input type="text" name="ano" placeholder="Ano do carro" required> 
-                    </fieldset>
-                    
-                
-                    <fieldset>
-                        <label for="img">Imagem:</label>
-                        <input type="url" name="img" placeholder="URL da imagem do carro" required>
-                    </fieldset>
-                    
-            
-                    <fieldset>
-                        <label for="valor">Valor:</label>
-                        <input type="text" name="valor" placeholder="Digite o valor do carro" required>
+    <%- include('./partials/header.ejs') %>
+    <main>
+        <section id="form__container">
+            <form method="post" action="/cadastrar">
+                <fieldset>
+                    <legend> Criar Filme </legend>
+                    <fieldset class="fieldset__data">
+                        <input type="text" name="modelo" required>
+                        <label for="modelo"> Nome Filme </label>
                     </fieldset>
 
-                    <fieldset>
-                        <label for="descricao">Descrição:</label>
-                        <input type="text" name="descricao" placeholder="Descrição do carro" required>
+                    <fieldset class="fieldset__data">
+                        <input type="text" name="marca" required>
+                        <label for="marca"> Nome Diretor </label>
                     </fieldset>
-                </div>
-               
 
-                <div class="buttons-form">
-                    <button type="submit" class="button-add">Adicionar Carro</button>
-                    <a href="/">Cancelar</a>
-                </div>
+                    <fieldset class="fieldset__data">
+                        <input type="number" name="ano" required>
+                        <label for="ano"> Duração </label>
+                    </fieldset>
+
+                    <fieldset class="fieldset__data">
+                        <input type="url" name="img" required>
+                        <label for="img"> Imagem </label>
+                    </fieldset>
+
+                    <fieldset class="fieldset__data">
+                        <input type="number" name="valor" required>
+                        <label for="valor"> Ano de Lançamento </label>
+                    </fieldset>
+
+                    <fieldset class="fieldset__data">
+                        <input type="text" name="descricao" required>
+                        <label for="descricao"> Iframe </label>
+                    </fieldset>
+                    <div id="btn__container">
+                        <button id="btn__submit" type="submit"> Enviar </button>
+                    </div>
+                </fieldset>
             </form>
-
-        </div>
-
+        </section>
     </main>
     <%- include('./partials/footer.ejs') %>
 </body>
+
 </html>
