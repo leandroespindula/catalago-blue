@@ -8,16 +8,16 @@ export const getIndex = async (req, res) => {
         res.render('index.ejs', {
             listCarros
         })
-    } catch(error) {
+    } catch (error) {
         res.send(error.message)
     }
 }
 
 export const getDetalhes = async (req, res) => {
     try {
-        const carrosDetalhes = await carros.findByPk(req.params.id)
-        res.render("detalhes.ejs", {
-            carrosDetalhes
+        const carroDetalhes = await carros.findByPk(req.params.id)
+        res.render('detalhes.ejs', {
+            carroDetalhes
         })
     } catch (error) {
         res.send(error.message)
@@ -26,7 +26,6 @@ export const getDetalhes = async (req, res) => {
 
 export const getDeletar = async (req, res) => {
     try {
-        // await connection.query(`DELETE FROM filmes WHERE id = ${req.params.id}`)
         await carros.destroy({
             where: {
                 id: req.params.id
@@ -38,12 +37,11 @@ export const getDeletar = async (req, res) => {
     }
 }
 
-export const getCadastrar = (req, res) => {
-    res.render('cadastrar.ejs');
+export const getCriar = (req, res) => {
+    res.render('criar.ejs')
 }
 
-export const postCadastrar = async (req, res) =>  {
-    
+export const postCriar = async (req, res) => {
     const {
         modelo,
         marca,
@@ -63,12 +61,11 @@ export const postCadastrar = async (req, res) =>  {
                 img,
                 valor,
                 descricao
-                })
+            })
+            res.render('criar.ejs')
         }
-        res.redirect('cadastrar.ejs');
-    }
-    catch(err) {
-        res.send(err.message);
+    } catch (error) {
+        res.send(error.message)
     }
 }
 
@@ -78,8 +75,7 @@ export const getEditar = async (req, res) => {
         res.render('editar.ejs', {
             carroAtual
         })
-    }
-    catch(error){
+    } catch (error) {
         res.send(error.message)
     }
 }
@@ -100,7 +96,7 @@ export const postEditar = async (req, res) => {
             ano: ano,
             img: img,
             valor: valor,
-            descricao: descricao,
+            descricao: descricao
         }, {
             where: {
                 id: req.params.id

@@ -11,37 +11,37 @@
     <%- include('./partials/header.ejs') %>
     <main>
         <section id="form__container">
-            <form method="post" action="/editar/<%= filmeAtual.id %> ">
+            <form method="post" action="/editar/<%= carroAtual.id %> ">
                 <fieldset>
-                    <legend> Editando o <%= carroAtual.modelo %>  </legend>
+                    <legend> Editando o <%= carroAtual.nome %>  </legend>
                     <fieldset class="fieldset__data">
-                        <input type="text" name="nome" required value="<%= filmeAtual.nome %> ">
-                        <label for="nome"> Nome Filme </label>
+                        <input type="text" name="modelo" required value="<%= carroAtual.modelo %> ">
+                        <label for="modelo"> Modelo </label>
                     </fieldset>
 
                     <fieldset class="fieldset__data">
-                        <input type="text" name="diretor" required value="<%= filmeAtual.diretor %>">
-                        <label for="diretor"> Nome Diretor </label>
+                        <input type="text" name="marca" required value="<%= carrAtual.marca %>">
+                        <label for="marca"> Marca </label>
                     </fieldset>
 
                     <fieldset class="fieldset__data">
-                        <input type="url" name="img" required value="<%= filmeAtual.img %>">
-                        <label for="img"> Imagem </label>
+                        <input type="text" name="ano" required value="<%= carroAtual.ano %>">
+                        <label for="ano"> Ano </label>
                     </fieldset>
 
                     <fieldset class="fieldset__data">
-                        <input type="number" name="duracao" required value="<%= filmeAtual.duracao %>">
-                        <label for="duracao"> Duração </label>
+                        <input type="url" name="img" required value="<%= carroAtual.img %>">
+                        <label for="img"> URL </label>
                     </fieldset>
 
                     <fieldset class="fieldset__data">
-                        <input type="text" name="ano" required value="<%= filmeAtual.ano %>">
-                        <label for="ano"> Ano de Lançamento </label>
+                        <input type="number" name="valor" required value="<%= carroAtual.valor %>">
+                        <label for="valor"> valor </label>
                     </fieldset>
 
                     <fieldset class="fieldset__data">
-                        <input type="text" name="iframe" required value="<%= filmeAtual.iframe %>">
-                        <label for="iframe"> Iframe </label>
+                        <input type="text" name="descricao" required value="<%= carroAtual.descricao %>">
+                        <label for="descricao"> Descrição </label>
                     </fieldset>
                     <div id="btn__container">
                         <button id="btn__submit" type="submit"> Enviar </button>
@@ -51,5 +51,6 @@
         </section>
     </main>
     <%- include('./partials/footer.ejs') %>
+</body>
 </body>
 </html>

@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/css/style.css" rel="stylesheet">
-    <link rel="icon" type="imagem/png" href="../img/carro.png"/>
-    <title> Inicio </title>
+    <title> Index </title>
 </head>
 
 <body>
@@ -15,25 +14,23 @@
     <main>
         <section id="card__container">
             <% listCarros.forEach(element => { %>
-            <a href="/detalhes/<%= element.id %>">
+            <a href="/detalhes/<%= element.id %> ">
                 <article class="cards">
                     <div class="card_img">
-                        <img src="<%= element.img %>"  alt="<%= element.nome %>">
+                        <img src="<%= element.img %> " alt="<%= element.modelo %> ">
                     </div>
-                    <div class="card_modelo">
+                    <div class="card_name">
                         <%= element.modelo %>
                     </div>
-                
                 </article>
             </a>
-            <div>
-                <a href="/deletar/<%= element.id %> "> </a>
-                <a href="/editar/<%= element.id %> "> </a>
+            <div class="btn__container">
+                <a href="/deletar/<%= element.id %> "> <i class="fa-solid fa-trash"></i> </a>
+                <a href="/editar/<%= element.id %> "> <i class="fa-solid fa-pencil"></i> </a>
             </div>
             <% }) %>
         </section>
     </main>
-
     <%- include('./partials/footer.ejs') %>
 </body>
 

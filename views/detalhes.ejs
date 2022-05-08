@@ -1,41 +1,42 @@
 <!DOCTYPE html>
-<html lang="pr-br">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-     <title>Detalhes</title>
+    <link href="/css/style.css" rel="stylesheet">
+    <title> Detalhes </title>
 </head>
 
 <body>
-
     <%- include('./partials/header.ejs') %>
-    
     <main>
-
+        <div id="sub__header">
+            <%= carroDetalhes.modelo %>
+        </div>
         <section id="card__container">
             
             <article class="cards">
                 <div class="card_img">
-                    <img src="<%= carrosDetalhes.img %>"  alt="<%= carrosDetalhes.nome %>">
+                    <img src="<%= carroDetalhes.img %>"  alt="<%= carroDetalhes.nome %>">
                 </div>
                 <div class="card_modelo">
-                    <%=carrosDetalhes.modelo %>
+                    <%=carroDetalhes.modelo %>
                 </div>
                 <div id="detalhes-decricao">
-                    <%= carrosDetalhes.descricao %>
+                    <%= carroDetalhes.descricao %>
                 </div>
 
                 <div id="marca-detalhes">
                     <div>
-                        <h3>Marca: <%= carrosDetalhes.marca %></h3>
+                        <h3>Marca: <%= carroDetalhes.marca %></h3>
                     </div>
                     <div>
-                        <h3>Ano: <%= carrosDetalhes.ano %></h3>
+                        <h3>Ano: <%= carroDetalhes.ano %></h3>
                     </div>
                     <div>
-                        <h3>Valor: R$ <%= carrosDetalhes.valor %></h3>
+                        <h3>Valor: R$ <%= carroDetalhes.valor %></h3>
                     </div>
                 </div>
                 
@@ -43,10 +44,8 @@
                 </article>
             
         </section>
-        
     </main>
-
     <%- include('./partials/footer.ejs') %>
 </body>
-    
+
 </html>

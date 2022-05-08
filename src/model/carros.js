@@ -1,5 +1,5 @@
 import Sequelize from 'sequelize'
-import {connection} from '../database/connection.js'
+import { connection } from '../database/connection.js'
 
 export const carros = connection.define('carros', {
     id: {
@@ -8,7 +8,7 @@ export const carros = connection.define('carros', {
         primaryKey: true,
         autoIncrement: true
     },
-    modelo:{
+    modelo: {
         type: Sequelize.STRING,
         allowNull: false
     },
@@ -32,9 +32,6 @@ export const carros = connection.define('carros', {
         type: Sequelize.STRING,
         allowNull: false
     }
-
-
-
 }, {
     freezeTableName: true,
     createdAt: false, 
@@ -43,7 +40,12 @@ export const carros = connection.define('carros', {
 })
 
 const initTable = async () => {
-    await carros.sync()
+    try {
+        await filmes.sync()
+    }
+    catch(error){
+        return error.message
+    }
 }
 
 initTable()

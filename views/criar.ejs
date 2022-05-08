@@ -14,37 +14,37 @@
     <%- include('./partials/header.ejs') %>
     <main>
         <section id="form__container">
-            <form method="post" action="/cadastrar">
+            <form method="post" action="/criar">
                 <fieldset>
-                    <legend> Criar Filme </legend>
+                    <legend> Criar Carro</legend>
                     <fieldset class="fieldset__data">
                         <input type="text" name="modelo" required>
-                        <label for="modelo"> Nome Filme </label>
+                        <label for="modelo"> Modelo </label>
                     </fieldset>
 
                     <fieldset class="fieldset__data">
                         <input type="text" name="marca" required>
-                        <label for="marca"> Nome Diretor </label>
+                        <label for="marca"> Marca </label>
                     </fieldset>
 
                     <fieldset class="fieldset__data">
-                        <input type="number" name="ano" required>
-                        <label for="ano"> Duração </label>
+                        <input type="text" name="ano" required>
+                        <label for="ano"> Ano </label>
                     </fieldset>
 
                     <fieldset class="fieldset__data">
                         <input type="url" name="img" required>
-                        <label for="img"> Imagem </label>
+                        <label for="img"> url </label>
                     </fieldset>
 
                     <fieldset class="fieldset__data">
                         <input type="number" name="valor" required>
-                        <label for="valor"> Ano de Lançamento </label>
+                        <label for="valor"> valor </label>
                     </fieldset>
 
                     <fieldset class="fieldset__data">
                         <input type="text" name="descricao" required>
-                        <label for="descricao"> Iframe </label>
+                        <label for="descricao"> descricao </label>
                     </fieldset>
                     <div id="btn__container">
                         <button id="btn__submit" type="submit"> Enviar </button>
