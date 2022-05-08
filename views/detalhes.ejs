@@ -12,9 +12,7 @@
 <body>
     <%- include('./partials/header.ejs') %>
     <main>
-        <div id="sub__header">
-            <%= carroDetalhes.modelo %>
-        </div>
+        
         <section id="card__container">
             
             <article class="cards">
@@ -28,7 +26,7 @@
                     <%= carroDetalhes.descricao %>
                 </div>
 
-                <div id="marca-detalhes">
+                <div class="carro-detalhes">
                     <div>
                         <h3>Marca: <%= carroDetalhes.marca %></h3>
                     </div>
