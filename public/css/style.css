@@ -31,6 +31,14 @@ header {
     background-color: #F2F2F2;
 }
 
+header nav a {
+    color: #BF9663;    
+}
+
+header nav a {
+    color: #D9B26A;
+}
+
 header nav {
     display: flex;
     width: 100%;
@@ -57,7 +65,7 @@ section#card__container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin-top: 1rem;
     padding: 16px;
     gap: 16px;
 }
@@ -98,16 +106,13 @@ article.cards div.card_modelo {
     justify-content: center;
     height: 10%;
     border: 4px inset #D9B26A;
-    margin-top: 1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 /*
 PAGINA CRIAR
 */
-
-article.carro-detalhes {
-    background-color: red; 
-}
 
 
 div.btn__container {
@@ -130,6 +135,8 @@ section#form__container {
 
 section#form__container form {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     width: 500px;
 }
@@ -156,13 +163,12 @@ form button#btn__submit {
     background-color: #D9B26A;
     color: #fff;
     height: 40px;
-    width: 60px;
+    width: 120px;
 }
 
 /*
-PAGINA DETALHES
+FOOTER
 */
-
 
 footer {
     display: flex;
@@ -172,10 +178,6 @@ footer {
     background-color: #F2F2F2;
     gap: 10px;
 } 
-
-/*
-FOOTER
-*/
 
 footer a {
     color: #BF9663;   
