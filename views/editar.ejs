@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,14 +13,14 @@
         <section id="form__container">
             <form method="post" action="/editar/<%= carroAtual.id %> ">
                 <fieldset>
-                    <legend> Editando o <%= carroAtual.nome %>  </legend>
+                    <legend> Editando o <%= carroAtual.modelo %>  </legend>
                     <fieldset class="fieldset__data">
                         <input type="text" name="modelo" required value="<%= carroAtual.modelo %> ">
                         <label for="modelo"> Modelo </label>
                     </fieldset>
 
                     <fieldset class="fieldset__data">
-                        <input type="text" name="marca" required value="<%= carrAtual.marca %>">
+                        <input type="text" name="marca" required value="<%= carroAtual.marca %>">
                         <label for="marca"> Marca </label>
                     </fieldset>
 
