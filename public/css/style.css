@@ -82,7 +82,7 @@ section#card__container {
 section article.cards {
     height: 350px;
     width: 350px;
-    margin-bottom: 0;
+    margin-bottom: 50px;
     margin-top: 50px;
 }
 
@@ -239,6 +239,7 @@ footer {
     height: 10%;
     background-color: #F2F2F2;
     gap: 10px;
+    margin-top: 30px;
 } 
 
 footer a {

@@ -4,12 +4,14 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 export const connection = new Sequelize(
-    process.env.DB_BASE,
-    process.env.DB_USER,
-    process.env.DB_PASS,
+    'postgres://carros_user:leM6COIAu3W91E9FrfDxixWAf6rF0jbD@dpg-c9s80n7h8vl9mld2qvt0-a/carros',
     {
-        host: process.env.DB_LOCAL,
-        port: 5432,
-        dialect: 'postgres'
+        dialect: 'postgres',
+        dialectOptions: {
+            ssl: {
+                require: true,
+                rejectUnauthorized: false
+            }
+        }
     }
 )

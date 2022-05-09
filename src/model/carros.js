@@ -41,7 +41,7 @@ export const carros = connection.define('carros', {
 
 const initTable = async () => {
     try {
-        await filmes.sync()
+        await carros.sync()
     }
     catch(error){
         return error.message
