@@ -12,10 +12,17 @@
 <body>
     <%- include('./partials/header.ejs') %>
     <main>
-        
+
+        <!-- <audio preload="metadata">
+            <source src="../audio/motor-mp3.mp3" type="audio/mpeg">
+            <source src="../audio/motor-ogg.ogg" type="audio/ogg">
+            <source src="../audio/motor-wav.wav" type="audio/wav">
+            <p>não consegue</p>
+        </audio>
+                 -->
         <section id="card__container">
             
-            <article class="cards">
+            <article class="cards-detalhes">
                 <div class="card_img">
                     <img src="<%= carroDetalhes.img %>"  alt="<%= carroDetalhes.nome %>">
                 </div>
@@ -41,6 +48,7 @@
                 </article>
             
         </section>
+
     </main>
     <%- include('./partials/footer.ejs') %>
 </body>
