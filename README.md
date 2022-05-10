@@ -1,8 +1,8 @@
 # Catálogo - Projeto final do módulo 2 da Blue-Edtech
 
-## Details
+## Detalhes
 
-Projeto 
+Projeto em sistema CRUD com banco de dados PostGreSql na nuvem. Arquiterura baseada em MVC ('Model', 'View', 'Controler'). Deploy no web server no Render (https://render.com/)
 
 ## Features
 
@@ -33,7 +33,7 @@ Projeto
 </div>
 
 
-## Contact
+## Contato
 
 <a href="https://www.linkedin.com/in/leandro-espindula-79307517a/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
