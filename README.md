@@ -1,4 +1,4 @@
-# Catálogo - Projeto final do módulo 2 da Blue-Edtech
+## Catálogo - Projeto final do módulo 2 da Blue-Edtech
 
 ## Detalhes
 
