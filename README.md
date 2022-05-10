@@ -1,5 +1,9 @@
-## Catálogo - Projeto final do módulo 2 da Blue-Edtech
+## Projeto da Blue-Edtech - Catálogo Super Carros
 
+<p align="center">
+    <img width= 500 src="public/paraReadme/super-carros.gif"
+</p>         
+         
 ## Detalhes
 
 Projeto em sistema CRUD com banco de dados PostGreSql na nuvem. Arquiterura baseada em MVC ('Model', 'View', 'Controler'). Deploy no web server no Render (https://render.com/)
