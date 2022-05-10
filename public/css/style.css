@@ -251,3 +251,12 @@ footer a:hover {
 }
 
 
+@media screen and (max-width: 920px) {
+    section article.cards {
+        color: #D9B26A;
+        text-shadow: -8px 2px 7px;
+        box-shadow: -2px 1px 41px 1px #BF9663;
+    }
+    
+
+}
