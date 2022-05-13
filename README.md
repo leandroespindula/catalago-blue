@@ -10,7 +10,7 @@ https://super-carros.onrender.com/
          
 ## Detalhes
 
-Projeto em sistema CRUD com banco de dados PostGreSql na nuvem. Arquiterura baseada em MVC ('Model', 'View', 'Controler'). Deploy no web server no Render (https://render.com/)
+Projeto em sistema CRUD com banco de dados PostGreSql na nuvem. Arquiterura baseada em MVC ('Model', 'View', 'Controler'). Deploy no web server, Render (https://render.com/)
 
 ## Features
 
